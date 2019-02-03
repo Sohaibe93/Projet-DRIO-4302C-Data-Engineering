@@ -16,4 +16,4 @@ Ce projet a été réalisé en utilisant Flask et MongoDB. Notre objectif est de
 	
 ## Auteurs :
 
-MOHAMMAD Sohaibe et ARIANFAR Siawash, étudiants en Data-Science à ESIEE Paris
+Mohammad Sohaibe et Arianfar Siawash, étudiants en Data-Science à ESIEE Paris
