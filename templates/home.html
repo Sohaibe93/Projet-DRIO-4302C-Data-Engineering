@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Mon Agenda</title>
+
+  </head>
+  <body>
+    <div class="head">
+        <center >
+        <h1>PROJET DATA ENGINEERING</h1>
+        <h1>Mon Agenda</h1>
+    </center>
+    </div>
+    <div class="Agenda">
+        <form method="POST">
+            {{ cform.hidden_tag() }}
+            <fieldset>
+                <legend>Ajouter un événement</legend>
+                {{ cform.date.label }}<br>
+                {{ cform.date }}<br>
+                {{ cform.description.label }}<br>
+                {{ cform.description }}<br>
+                {{ cform.heure.label }}<br>
+                {{ cform.heure }}<br><br>
+                {{ cform.creer }}
+            </fieldset>
+        </form>
+        <form  method="POST">
+            {{ uform.hidden_tag() }}
+            <fieldset>
+                <legend>Modifiez un événement</legend>
+                {{ uform.id.label }}<br>
+                {{ uform.id }}<br><br>
+                {{ uform.description.label }}<br>
+                {{ uform.description }}<br>
+                {{ uform.modifier }}
+            </fieldset>
+        </form>
+        <form method="POST">
+            {{ dform.hidden_tag() }}
+            <fieldset>
+                <legend>Supprimer un événement</legend>
+                {{ dform.id.label }}<br>
+                {{ dform.id }}<br>
+                {{ dform.supprimer }}
+            </fieldset>
+        </form>
+        <form method="POST">
+            {{ reinit.hidden_tag() }}
+            <b>Réinitialisez</b> {{ reinit.reinit }}
+        </form>
+    </div>
+    <br>
+    <br>
+    <b>Liste</b><br><br>
+    {% for i in data %}
+        ID = {{ i["id"] }} <br>
+        Date = {{ i["date"] }}<br>
+        Description = {{ i["description"] }} <br>
+        Heure = {{ i["heure"] }}<br><br>
+    {% endfor %}
+  </body>
+</html>
