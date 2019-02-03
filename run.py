@@ -11,7 +11,7 @@ client = MongoClient('localhost:27017')
 db = client.TaskManager
 
 if db.settings.find({'name': 'task_id'}).count() <= 0:
-    print("Votre tâche n'a pas été trouvé...")
+    print("Tache non trouvee...")
     db.settings.insert_one({'name':'task_id', 'value':0})
 
 def modifID(value): # fonction permettant de donner un ID à chaque évenement de manière croissante
