@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import TextField, IntegerField, SubmitField
+from wtforms import TextField, SubmitField
 
 class RdvCreate(FlaskForm):
     date = TextField('Date')
